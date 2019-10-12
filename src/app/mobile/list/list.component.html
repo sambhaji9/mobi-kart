@@ -1,0 +1,17 @@
+<div>
+   <ul>
+      <li *ngFor="let phone of phoneList">
+         <mat-card>
+            <mat-card-header>
+               {{phone.name}}
+            </mat-card-header>
+            <img src="../../../assets/{{phone.imageUrl}}" />
+            <mat-card-content>
+               {{phone.snippet}}
+            </mat-card-content>
+            <button mat-button [routerLink]="['cart', phone.id]">ADD TO CART</button>
+            <button mat-button [routerLink]="['details', phone.id]">SEE DETAILS</button>
+         </mat-card>
+      </li>
+   </ul>
+</div>

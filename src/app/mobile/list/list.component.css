@@ -1,0 +1,19 @@
+li {
+    list-style-type: none;
+}
+
+mat-card {
+    background: #ffffff;
+    color: #000060;
+    margin-bottom: 10px;
+    max-width: 500px;
+    transition: all .2s ease-in-out;
+}
+
+mat-card:hover {
+    transform: scale(1.01);
+}
+
+img {
+    width: 35%;
+}
