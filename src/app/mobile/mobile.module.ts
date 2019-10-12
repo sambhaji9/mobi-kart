@@ -6,6 +6,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { DetailsComponent } from './details/details.component';
 import { RouterModule } from '@angular/router';
 import { CartComponent } from './cart/cart.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [ListComponent, DetailsComponent, CartComponent],
@@ -13,7 +14,8 @@ import { CartComponent } from './cart/cart.component';
     CommonModule,
     MatCardModule,
     MatButtonModule,
-    RouterModule
+    RouterModule,
+    BrowserAnimationsModule
   ],
   exports: [ListComponent]
 })

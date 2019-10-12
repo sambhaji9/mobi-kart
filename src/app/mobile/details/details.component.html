@@ -1,1 +1,122 @@
-{{phoneDetails.description}}
+<div>
+    <div>
+        <h3>{{phoneDetails.name}}</h3>
+    </div>
+    <hr>
+    <div>
+        <h4>{{phoneDetails.description}}</h4>
+    </div>
+
+    <div style="position: relative;">
+        <mat-card class="images-container">
+            <div class="image-viewer">
+                <img class="infocus-image" src="../../../assets/{{selectedImage}}" />
+            </div>
+            <div>
+                <div class="image-list-container" *ngFor="let image of phoneDetails.images">
+                    <img (click)="showSelectedImage(image)" class="image-list-container-image"
+                        src="../../../assets/{{image}}" />
+                </div>
+            </div>
+
+        </mat-card>
+
+        <mat-card class="feature">
+            <p class="header">Availability and Networks</p>
+            <p class="sub-header">Availability</p>
+            <p class="text">{{phoneDetails.availability}}</p>
+        </mat-card>
+
+        <mat-card class="feature">
+            <p class="header">Battery</p>
+            <p class="sub-header">Type</p>
+            <p class="text">{{phoneDetails.battery.type}}</p>
+            <p class="sub-header">Talk Time</p>
+            <p class="text">{{phoneDetails.battery.talkTime}}</p>
+            <p class="sub-header">Standby Time</p>
+            <p class="text">{{phoneDetails.battery.standbyTime}}</p>
+        </mat-card>
+
+        <mat-card class="feature">
+            <p class="header">Storage and Memory</p>
+            <p class="sub-header">RAM</p>
+            <p class="text">{{phoneDetails.storage.ram}}</p>
+            <p class="sub-header">Internal Storage</p>
+            <p class="text">{{phoneDetails.storage.flash}}</p>
+        </mat-card>
+
+        <mat-card class="feature">
+            <p class="header">Connectivity & Network Support</p>
+            <p class="sub-header">WiFi</p>
+            <p class="text">{{phoneDetails.connectivity.wifi}}</p>
+            <p class="sub-header">Bluetooth</p>
+            <p class="text">{{phoneDetails.connectivity.bluetooth}}</p>
+            <p class="sub-header">Infrared</p>
+            <p class="text">{{phoneDetails.connectivity.infrared}}</p>
+            <p class="sub-header">GPS</p>
+            <p class="text">{{phoneDetails.connectivity.gps}}</p>
+        </mat-card>
+
+        <mat-card class="feature">
+            <p class="header">Android</p>
+            <p class="sub-header">OS version</p>
+            <p class="text">{{phoneDetails.android.os}}</p>
+            <p class="sub-header">User Interface</p>
+            <p class="text">{{phoneDetails.android.ui}}</p>
+        </mat-card>
+
+        <mat-card class="feature">
+            <p class="header">Size and Weight</p>
+            <p class="sub-header">Weight</p>
+            <p class="text">{{phoneDetails.sizeAndWeight.weight}}</p>
+            <p class="sub-header">Dimensions</p>
+            <ul>
+                <li *ngFor="let dimension of phoneDetails.sizeAndWeight.dimensions">
+                    <p class="text">{{dimension}}</p>
+                </li>
+            </ul>
+        </mat-card>
+
+        <mat-card class="feature">
+            <p class="header">Display</p>
+            <p class="sub-header">Screen Size</p>
+            <p class="text">{{phoneDetails.display.screenSize}}</p>
+            <p class="sub-header">Screen Resolution</p>
+            <p class="text">{{phoneDetails.display.screenResolution}}</p>
+            <p class="sub-header">Touch screen</p>
+            <p class="text">{{phoneDetails.display.touchScreen}}</p>
+        </mat-card>
+
+        <mat-card class="feature">
+            <p class="header">Hardware</p>
+            <p class="sub-header">CPU</p>
+            <p class="text">{{phoneDetails.hardware.cpu}}</p>
+            <p class="sub-header">USB</p>
+            <p class="text">{{phoneDetails.hardware.usb}}</p>
+            <p class="sub-header">Audio/headphone jack</p>
+            <p class="text">{{phoneDetails.hardware.audioJack}}</p>
+            <p class="sub-header">FM Radio</p>
+            <p class="text">{{phoneDetails.hardware.fmRadio}}</p>
+            <p class="sub-header">Acclerometer</p>
+            <p class="text">{{phoneDetails.hardware.accelerometer}}</p>
+        </mat-card>
+
+        <mat-card class="feature">
+            <p class="header">Camera</p>
+            <p class="sub-header">Primary</p>
+            <p class="text">{{phoneDetails.camera.primary}}</p>
+            <p class="sub-header">Features</p>
+            <ul>
+                <li *ngFor="let camera of phoneDetails.camera.features">
+                    <p class="text">{{camera}}</p>
+                </li>
+            </ul>
+
+        </mat-card>
+
+        <mat-card class="feature">
+            <p class="header">Additional Features</p>
+            <p class="text">{{phoneDetails.additionalFeatures}}</p>
+        </mat-card>
+    </div>
+</div>

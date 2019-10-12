@@ -1,0 +1,94 @@
+h3 {
+    font-size: 30px;
+    padding-left: 15px;
+    color: #000050;
+    font-weight: lighter;
+    position: sticky;
+}
+
+h4 {
+    font-size: 15px;
+    padding-left: 13px;
+    color: #000050;
+    font-weight: 400;
+}
+
+hr {
+    margin: 0px 15px;
+}
+
+.images-container {
+    width: 96%;
+    transition: none;
+}
+
+.images-container:hover {
+    transform: none;
+}
+
+.images-list {
+    display: flex;
+}
+
+.images-list li {
+    list-style-type: none;
+}
+
+.image-viewer {
+    width: 45%;
+    float: left;
+}
+
+.infocus-image {
+    width: 300px;
+    display: block;
+    margin: auto;
+}
+
+.image-list-container {
+    float: left;
+}
+
+.image-list-container-image {
+        width: 100px;
+}
+
+mat-card {
+    min-width: 250px;
+    min-height: 250px;
+    background: #ffffff;
+    color: #000060;
+    margin: 5px;
+    float: left;
+    transition: all 0.2s ease-in-out;
+}
+
+mat-card:hover {
+    transform: scale(1.01);
+}
+
+.feature {
+    color: #000060;
+    float: left;
+}
+
+.feature .header {
+    font-size: 15px;
+    padding: 0 10px;
+    font-weight: 500;
+}
+
+.feature .sub-header {
+    font-size: 14px;
+    padding: 2px 10px;
+    font-weight: 500;
+}
+
+.text {
+    padding-left: 15px;
+    font-size: 13px;
+}
+
+li {
+    list-style-type: disc;
+}

@@ -7,20 +7,25 @@ import { CartComponent } from './mobile/cart/cart.component';
 const routes: Routes = [
    {
       path: '',
-      component: ListComponent
+      component: ListComponent,
+      data: {animations: 'ListComponent'}
    },
    {
       path: 'details/:id',
-      component: DetailsComponent
+      component: DetailsComponent,
+      data: {animations: 'DetailsComponent'}
    },
    {
       path: 'cart/:id',
-      component: CartComponent
+      component: CartComponent,
+      data: {animations: 'CartComponent'}
    }
 ];
 
 @NgModule({
-   imports: [RouterModule.forRoot(routes)],
+   imports: [RouterModule.forRoot(routes, {
+      scrollPositionRestoration: 'enabled'
+   })],
    exports: [RouterModule]
 })
 export class AppRoutingModule { }
