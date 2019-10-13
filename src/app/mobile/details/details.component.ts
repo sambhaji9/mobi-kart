@@ -15,57 +15,56 @@ export class DetailsComponent implements OnInit {
 
    constructor(private http: HttpClient, private activatedRoute: ActivatedRoute) {
       this.phoneDetails = {
-         "additionalFeatures": "",
-         "android": {
-            "os": "",
-            "ui": ""
+         additionalFeatures: '',
+         android: {
+            os: '',
+            ui: ''
          },
-         "availability": [
-            ""
+         availability: [
+            ''
          ],
-         "battery": {
-            "standbyTime": "",
-            "talkTime": "",
-            "type": ""
+         battery: {
+            standbyTime: '',
+            talkTime: '',
+            type: ''
          },
-         "camera": {
-            "features": [],
-            "primary": ""
+         camera: {
+            features: [],
+            primary: ''
          },
-         "connectivity": {
-            "bluetooth": "",
-            "cell": "",
-            "gps": true,
-            "infrared": false,
-            "wifi": ""
+         connectivity: {
+            bluetooth: '',
+            cell: '',
+            gps: true,
+            infrared: false,
+            wifi: ''
          },
-         "description": "",
-         "display": {
-            "screenResolution": "",
-            "screenSize": "",
-            "touchScreen": true
+         description: '',
+         display: {
+            screenResolution: '',
+            screenSize: '',
+            touchScreen: true
          },
-         "hardware": {
-            "accelerometer": true,
-            "audioJack": "",
-            "cpu": "",
-            "fmRadio": false,
-            "physicalKeyboard": false,
-            "usb": ""
+         hardware: {
+            accelerometer: true,
+            audioJack: '',
+            cpu: '',
+            fmRadio: false,
+            physicalKeyboard: false,
+            usb: ''
          },
-         "id": "",
-         "images": [],
-         "name": "",
-         "sizeAndWeight": {
-            "dimensions": [],
-            "weight": ""
+         id: '',
+         images: [],
+         name: '',
+         sizeAndWeight: {
+            dimensions: [],
+            weight: ''
          },
-         "storage": {
-            "flash": "",
-            "ram": ""
+         storage: {
+            flash: '',
+            ram: ''
          }
-      }
-         ;
+      };
    }
 
    ngOnInit() {
