@@ -3,16 +3,22 @@ pipeline {
     
     stages {
         stage("DEV build") {
-            echo "DEV build"
-            bat "ng build"
+            steps {
+                echo "DEV build"
+                bat "ng build"
+            }
         }
         stage("Lint") {
-            echo "Lint"
-            bat "ng lint"
+            steps {
+                echo "Lint"
+                bat "ng lint"
+            }
         }
         stage("Unit test") {
-            echo "Unit test"
-            bat "ng test"
+            steps {
+                echo "Unit test"
+                bat "ng test"
+            }
         }
     }
 }
