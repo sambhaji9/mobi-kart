@@ -21,17 +21,17 @@ export class DetailsComponent implements OnInit {
       this.http.get('http://localhost:3000/details?id=' + this.activatedRoute.snapshot.params.id).subscribe(data => {
          this.phoneDetails = data;
 
-         this.selectedImage = this.phoneDetails.images[0]
-         console.log(this.selectedImage); 
+         this.selectedImage = this.phoneDetails.images[0];
+         console.log(this.selectedImage);
       });
    }
 
    /**
     * function showing the selected image
-    * @param image 
+    * @param image, the image name to be displayed
     */
    showSelectedImage(image) {
-      console.log(this.selectedImage); 
+      console.log(this.selectedImage);
       this.selectedImage = image;
    }
 
