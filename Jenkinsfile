@@ -2,6 +2,10 @@ pipeline {
     agent {
         label "master"
     }
+
+    tools {
+        nodejs "localNode"
+    }
     
     stages {
 
