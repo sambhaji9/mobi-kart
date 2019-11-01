@@ -65,4 +65,10 @@ pipeline {
             }
         }
     }
+
+    post {
+        success {
+            echo "This is called after all the stages"
+        }
+    }
 }
