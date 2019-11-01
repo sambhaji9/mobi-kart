@@ -68,7 +68,14 @@ pipeline {
 
     post {
         success {
-            echo "This is called after all the stages"
+            mail to: 'mane.sambhaji9@gmail.com',
+            subject: "Build successful: ${currentBuild.fullDisplayName}",
+            body: "Build successful: ${env.BUILD_URL}"
+        }
+        failure {
+            mail to: 'mane.sambhaji9@gmail.com',
+            subject: "Build failure: ${currentBuild.fullDisplayName}",
+            body: "Something is wrong with: ${env.BUILD_URL}"
         }
     }
 }
