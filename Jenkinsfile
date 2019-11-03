@@ -64,18 +64,20 @@ pipeline {
                 }
             }
         }
-    }
 
-    post {
-        success {
-            mail to: 'mane.sambhaji9@gmail.com',
-            subject: "Build successful: ${currentBuild.fullDisplayName}",
-            body: "Build successful: ${env.BUILD_URL}"
-        }
-        failure {
-            mail to: 'mane.sambhaji9@gmail.com',
-            subject: "Build failure: ${currentBuild.fullDisplayName}",
-            body: "Something is wrong with: ${env.BUILD_URL}"
+        stage("SonarQube analysis") {
+            steps {
+                echo "Sonar Qube analysis"
+                bat "npm run sonar"
+            }
+            post {
+                success {
+                    echo "Sonarqube analysis success"
+                }
+                failure {
+                    echo "Sonarqube analysis failure"
+                }
+            }
         }
     }
 }
