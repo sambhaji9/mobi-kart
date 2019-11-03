@@ -1,0 +1,5 @@
+projectKey=mobi-kart
+serverUrl=http://localhost:9000
+dashboardUrl=http://localhost:9000/dashboard/index/mobi-kart
+ceTaskId=AW4ve-4u61_G7s-thKxK
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AW4ve-4u61_G7s-thKxK

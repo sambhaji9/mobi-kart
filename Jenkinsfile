@@ -64,5 +64,20 @@ pipeline {
                 }
             }
         }
+
+        stage("SonarQube analysis") {
+            steps {
+                echo "Sonar Qube analysis"
+                bat "npm run sonar"
+            }
+            post {
+                success {
+                    echo "Sonarqube analysis success"
+                }
+                failure {
+                    echo "Sonarqube analysis failure"
+                }
+            }
+        }
     }
 }
