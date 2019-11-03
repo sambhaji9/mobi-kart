@@ -23,7 +23,7 @@ pipeline {
         stage("DEV build") {
             steps {
                 echo "DEV build"
-                bat "ng build"
+                bat "npm run build"
             }
             post {
                 success {
@@ -38,7 +38,7 @@ pipeline {
         stage("Lint") {
             steps {
                 echo "Lint"
-                bat "ng lint"
+                bat "npm run lint"
             }
             post {
                 success {
@@ -53,7 +53,7 @@ pipeline {
         stage("Unit test") {
             steps {
                 echo "Unit test"
-                bat "ng test"
+                bat "npm run test"
             }
             post {
                 success {
