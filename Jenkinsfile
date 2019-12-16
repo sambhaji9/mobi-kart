@@ -15,7 +15,7 @@ pipeline {
                     echo "NPM packages installed"
                 }
                 failure {
-                    echo "NPM install failed"
+                    echo "NPM installation failed"
                 }
             }
         }
